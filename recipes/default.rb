@@ -16,9 +16,9 @@
 # limitations under the License.
 #
 
-case node[:platform]
+case node["platform"]
 when "redhat","centos","fedora","suse"
-  arch = node[:kernel][:machine]
+  arch = node["kernel"]["machine"]
   arch = "i386" unless arch == "x86_64"
   
   rpm_file = "percona-release-0.0-1.#{arch}.rpm"
