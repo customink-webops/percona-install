@@ -16,7 +16,7 @@
 # limitations under the License.
 #
 # http://www.percona.com/downloads/percona-monitoring-plugins/percona-monitoring-plugins-0.9.0.tar.gz
-default['chef-percona-install']['plugins_url'] = "http://www.percona.com/downloads/percona-monitoring-plugins/"
-default['chef-percona-install']['plugins_version'] = "0.9.0"
-default['chef-percona-install']['plugins_sha'] = "04a7ace4c345ddc2a6b26cae0f6252533663d809008f284919b207b9a00e4a44"
-default['chef-percona-install']['plugins_path'] = "/opt/pmp"
+default['percona-install']['plugins_url'] = "http://www.percona.com/downloads/percona-monitoring-plugins/"
+default['percona-install']['plugins_version'] = "0.9.0"
+default['percona-install']['plugins_sha'] = "04a7ace4c345ddc2a6b26cae0f6252533663d809008f284919b207b9a00e4a44"
+default['percona-install']['plugins_path'] = "/opt/pmp"
