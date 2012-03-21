@@ -17,10 +17,10 @@
 #
 
 percona_plugins_tarball = "percona-monitoring-plugins-#{node['chef-percona-install']['plugins_version']}.tar.gz"
-percona_plugins_url = "#{node['chef-percona-install']['plugins_url']}/#{percona_plugins_tarball}"
+percona_plugins_url = "#{node['percona-install']['plugins_url']}/#{percona_plugins_tarball}"
 
 directory "percona_plugins_dir" do
-  path node['chef-percona-install']['plugins_path']
+  path node['percona-install']['plugins_path']
   owner "root"
   group "root"
   mode 0755
@@ -28,7 +28,7 @@ end
 
 execute "percona-extract-plugins" do
   command "tar zxf #{Chef::Config[:file_cache_path]}/#{percona_plugins_tarball} --strip-components 2 -C #{node['chef-percona-install']['plugins_path']}"
-  creates "#{node['chef-percona-install']['plugins_path']}/COPYING"
+  creates "#{node['percona-install']['plugins_path']}/COPYING"
   only_if do File.exist?("#{Chef::Config[:file_cache_path]}/#{percona_plugins_tarball}") end
   action :run
 end
@@ -36,6 +36,6 @@ end
 remote_file "#{Chef::Config[:file_cache_path]}/#{percona_plugins_tarball}" do
   source percona_plugins_url
   mode 0644
-  checksum node['chef-percona-install']['plugins_sha']
+  checksum node['percona-install']['plugins_sha']
   notifies :run, "execute[percona-extract-plugins]", :immediately
 end
