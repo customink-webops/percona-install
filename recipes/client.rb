@@ -19,7 +19,7 @@
 require_recipe "percona-install"
 
 case node["platform"]
-when "redhat","centos","fedora","suse"
+when "redhat","centos","fedora","suse", "amazon", "scientific"
   package "Percona-Server-client-55"
   package "Percona-Server-devel-55"
 when "debian","ubuntu"

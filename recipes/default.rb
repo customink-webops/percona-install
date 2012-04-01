@@ -17,7 +17,7 @@
 #
 
 case node["platform"]
-when "redhat","centos","fedora","suse"
+when "redhat","centos","fedora","suse", "amazon", "scientific"
   arch = node["kernel"]["machine"]
   arch = "i386" unless arch == "x86_64"
   
