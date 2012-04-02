@@ -16,6 +16,8 @@ none
 Attributes
 ==========
 
+These attributes are used by the monitoring recipe:
+
 * `node['percona-install']['plugins_url']` - The base URL for the percona-monitoring-plugins
 * `node['percona-install']['plugins_version']` - The version of plugins to be installed
 * `node['percona-install']['plugins_sha']` - The sha of the downloaded tar gzip file.
