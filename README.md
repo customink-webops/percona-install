@@ -74,7 +74,7 @@ License and Authors
 ===================
 
 Author:: Nathen Harvey <nharvey@customink.com>  
-Author:: Miah Johnson <>  
+Author:: Miah Johnson <miah@chia-let.org>  
 
 Copyright 2011-2012, CustomInk, LLC  
 Copyright 2012, CX Inc.  
