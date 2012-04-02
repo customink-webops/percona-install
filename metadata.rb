@@ -8,7 +8,7 @@ version          "0.0.6"
 attribute "percona-install/plugins_url", 
   :dislpay_name => "Percona Install - Plugins URL",
   :description => "The base URL for the percona-monitoring-plugins",
-  :type => "URL"
+  :type => "string"
 
 attribute "percona-install/plugins_version", 
   :dislpay_name => "Percona Install - Plugins Version",
