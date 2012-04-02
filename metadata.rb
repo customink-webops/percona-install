@@ -5,6 +5,12 @@ description      "Installs Percona apt/yum repostiory, client, and server"
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          "0.0.6"
 
+recipe           "default", "Installs percona-release apt or yum repository"
+recipe           "client", "Installs Percona client"
+recipe           "server", "Installs Percona server"
+recipe           "xtrabackup", "Installs Percona xtrabackup"
+recipe           "monitoring", "Installs Percona monitoring plugins"
+
 attribute "percona-install/plugins_url", 
   :dislpay_name => "Percona Install - Plugins URL",
   :description => "The base URL for the percona-monitoring-plugins",
