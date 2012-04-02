@@ -16,7 +16,7 @@
 # limitations under the License.
 #
 
-percona_plugins_tarball = "percona-monitoring-plugins-#{node['chef-percona-install']['plugins_version']}.tar.gz"
+percona_plugins_tarball = "percona-monitoring-plugins-#{node['percona-install']['plugins_version']}.tar.gz"
 percona_plugins_url = "#{node['percona-install']['plugins_url']}/#{percona_plugins_tarball}"
 
 directory "percona_plugins_dir" do
@@ -27,7 +27,7 @@ directory "percona_plugins_dir" do
 end
 
 execute "percona-extract-plugins" do
-  command "tar zxf #{Chef::Config[:file_cache_path]}/#{percona_plugins_tarball} --strip-components 2 -C #{node['chef-percona-install']['plugins_path']}"
+  command "tar zxf #{Chef::Config[:file_cache_path]}/#{percona_plugins_tarball} --strip-components 2 -C #{node['percona-install']['plugins_path']}"
   creates "#{node['percona-install']['plugins_path']}/COPYING"
   only_if do File.exist?("#{Chef::Config[:file_cache_path]}/#{percona_plugins_tarball}") end
   action :run
