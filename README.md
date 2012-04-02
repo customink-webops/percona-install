@@ -6,6 +6,7 @@ This cookbook installs the percona-release apt or yum repository and allows you 
 More info:  
   * http://www.percona.com/docs/wiki/percona-server:release:start
   * http://www.percona.com/software/percona-monitoring-plugins/
+  * http://www.percona.com/software/percona-xtrabackup/
 
 
 Requirements
@@ -30,6 +31,7 @@ Recipes
 * default    - Installs percona-release apt or yum repository
 * client     - Installs Percona client
 * server     - Installs Percona server
+* xtrabackup - Installs Percona xtrabackup
 * monitoring - Installs Percona monitoring plugins
 
 Usage
@@ -56,6 +58,12 @@ Include the percona-install::server recipe to install the percona server
 
 Or add it to your role, or directly to a node's recipes.
 
+Include the percona-install::xtrabackup recipe to install percona xtrabackup
+
+    include_recipe "percona-install::xtrabackup"
+
+Or add it to your role, or directly to a node's recipes.
+
 Include the percona-install::monitoring recipe to install the percona monitoring tools
 
     include_recipe "percona-install::monitoring"
@@ -69,7 +77,7 @@ Author:: Nathen Harvey <nharvey@customink.com>
 Author:: Miah Johnson <>  
 
 Copyright 2011-2012, CustomInk, LLC  
-Copyright 2011, CX Inc.  
+Copyright 2012, CX Inc.  
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
