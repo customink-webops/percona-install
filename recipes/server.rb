@@ -21,7 +21,8 @@ require_recipe "percona-install"
 case node["platform"]
 when "redhat","centos","fedora","suse", "amazon", "scientific"
   execute "remove conflicting mysql-libs" do
-    command "rpm -e --nodeps mysql-libs "
+    command "rpm -e --nodeps mysql-libs"
+    only_if "rpm -qa | grep mysql-libs"
   end
   
   %w(Percona-Server-server-55 Percona-Server-devel-55 Percona-Server-shared-compat).each do |p|
