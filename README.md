@@ -1,4 +1,4 @@
-percona-install [![Build Status](https://secure.travis-ci.org/customink-webops/percona-install.png)](http://travis-ci.org/customink-webops/percona-install)
+# <a name="title"></a> percona-install [![Build Status](https://secure.travis-ci.org/customink-webops/percona-install.png)](http://travis-ci.org/customink-webops/percona-install)
 
 Description
 ===========
