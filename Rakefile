@@ -21,7 +21,7 @@ task :knife do
 end
 
 task :prepare_sandbox do
-  files = %w{*.md *.rb attributes definitions files providers recipes resources templates}
+  files = %w{*.md *.rb attributes definitions libraries files providers recipes resources templates}
 
   rm_rf sandbox_path
   mkdir_p sandbox_path
