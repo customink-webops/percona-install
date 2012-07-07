@@ -2,4 +2,4 @@ source "https://rubygems.org"
 
 gem 'rake'
 gem 'foodcritic'
-gem 'chef'
+gem 'chef', '~> 10.12.0'
