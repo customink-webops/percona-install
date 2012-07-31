@@ -9,6 +9,7 @@ More info:
   * http://www.percona.com/docs/wiki/percona-server:release:start
   * http://www.percona.com/software/percona-monitoring-plugins/
   * http://www.percona.com/software/percona-xtrabackup/
+  * http://www.percona.com/software/percona-toolkit/
 
 
 Requirements
@@ -35,6 +36,7 @@ Recipes
 * server     - Installs Percona server
 * xtrabackup - Installs Percona xtrabackup
 * monitoring - Installs Percona monitoring plugins
+* toolkit    - Installs Percona toolkit
 
 Usage
 =====
@@ -69,6 +71,12 @@ Or add it to your role, or directly to a node's recipes.
 Include the percona-install::monitoring recipe to install the percona monitoring tools
 
     include_recipe "percona-install::monitoring"
+
+Or add it to your role, or directly to a node's recipes.
+
+Include the percona-install::toolkit recipe to install percona toolkit
+
+    include_recipe "percona-install::toolkit"
 
 Or add it to your role, or directly to a node's recipes.
 
