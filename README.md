@@ -85,6 +85,8 @@ License and Authors
 
 Author:: Nathen Harvey <nharvey@customink.com>  
 Author:: Miah Johnson <miah@chia-let.org>  
+Author:: Jef Mathiot <jeff.mathiot@gmail.com>
+Author:: Michael H. Oshita <ijinpublic+github@gmail.com>
 
 Copyright 2011-2012, CustomInk, LLC  
 Copyright 2012, CX Inc.  
