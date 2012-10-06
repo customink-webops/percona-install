@@ -38,7 +38,7 @@ when "debian","ubuntu"
 
   execute "key-install" do
     action :nothing
-    command "gpg --keyserver  hkp://keys.gnupg.net --recv-keys 1C4CBDCDCD2EFD2A | gpg -a --export CD2EFD2A | apt-key add -; apt-get update"
+    command "gpg --keyserver  hkp://keys.gnupg.net --recv-keys 1C4CBDCDCD2EFD2A | gpg -a --export CD2EFD2A | apt-key add - && apt-get update"
   end
 
   template "/etc/apt/sources.list.d/percona_repo.list" do
