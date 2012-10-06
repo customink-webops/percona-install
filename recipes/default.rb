@@ -37,6 +37,7 @@ when "redhat","centos","fedora","suse", "amazon", "scientific"
 when "debian","ubuntu"
   
   execute "key-install" do
+    action :nothing
 	  command "gpg --keyserver  hkp://keys.gnupg.net --recv-keys 1C4CBDCDCD2EFD2A | gpg -a --export CD2EFD2A | apt-key add -; apt-get update"
 	end
 
