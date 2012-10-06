@@ -20,7 +20,7 @@ case node["platform"]
 when "redhat","centos","fedora","suse", "amazon", "scientific"
   arch = node["kernel"]["machine"]
   arch = "i386" unless arch == "x86_64"
-  
+
   rpm_file = "percona-release-0.0-1.#{arch}.rpm"
 
   remote_file "/var/tmp/#{rpm_file}" do
@@ -35,17 +35,17 @@ when "redhat","centos","fedora","suse", "amazon", "scientific"
   end
 
 when "debian","ubuntu"
-  
+
   execute "key-install" do
     action :nothing
-	  command "gpg --keyserver  hkp://keys.gnupg.net --recv-keys 1C4CBDCDCD2EFD2A | gpg -a --export CD2EFD2A | apt-key add -; apt-get update"
-	end
+    command "gpg --keyserver  hkp://keys.gnupg.net --recv-keys 1C4CBDCDCD2EFD2A | gpg -a --export CD2EFD2A | apt-key add -; apt-get update"
+  end
 
-	template "/etc/apt/sources.list.d/percona_repo.list" do
-      source "percona_repo.list.erb"
-	  owner "root"
-	  group "root"
-	  mode "0644"
-	  notifies :run, resources(:execute => "key-install"), :immediately
-	end
+  template "/etc/apt/sources.list.d/percona_repo.list" do
+    source "percona_repo.list.erb"
+    owner "root"
+    group "root"
+    mode "0644"
+    notifies :run, resources(:execute => "key-install"), :immediately
+  end
 end
