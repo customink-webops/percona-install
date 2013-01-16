@@ -46,6 +46,6 @@ when "debian","ubuntu"
     owner "root"
     group "root"
     mode "0644"
-    notifies :run, resources(:execute => "key-install"), :immediately
+    notifies :run, "execute[key-install]", :immediately
   end
 end

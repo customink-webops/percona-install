@@ -16,7 +16,7 @@
 # limitations under the License.
 #
 
-require_recipe "percona-install"
+include_recipe "percona-install"
 
 case node["platform"]
 when "redhat","centos","fedora","suse", "amazon", "scientific"

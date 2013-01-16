@@ -16,6 +16,6 @@
 # limitations under the License.
 #
 
-require_recipe "percona-install"
+include_recipe "percona-install"
 
 package "xtrabackup"
